@@ -12,15 +12,15 @@ def main():
     
     euro_pricer = MonteCarloOptionPricer(S0, K, T, r, sigma)
     euro_price = euro_pricer.european_call()
-    print(f"欧式看涨期权价格: {euro_price:.4f}")
+    print(f"European Option: {euro_price:.4f}")
     
     asian_pricer = AsianOptionPricer(S0, K, T, r, sigma)
     asian_price = asian_pricer.price_asian_call()
-    print(f"亚式看涨期权价格: {asian_price:.4f}")
+    print(f"Asian Option: {asian_price:.4f}")
     
     barrier_pricer = BarrierOptionPricer(S0, K, B, T, r, sigma)
     barrier_price = barrier_pricer.up_and_out_call()
-    print(f"向上敲出看涨期权价格: {barrier_price:.4f}")
+    print(f"Barrier Option: {barrier_price:.4f}")
 
 if __name__ == "__main__":
     main()
